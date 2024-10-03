@@ -86,6 +86,13 @@ app.get("/plan-room", (req, res) => {
   );
 });
 
+app.get("/static/css/glider.6f8873f.css", (req, res) => {
+  res.setHeader("Content-Type", "text/css");
+  res.sendFile(
+    path.join(__dirname, "public", "static", "css", "glider.6f8873f.css")
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
