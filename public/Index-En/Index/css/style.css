@@ -1,0 +1,109 @@
+.navigation-main__nav-item--has-dropdown {
+  position: relative;
+}
+
+.navigation-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  top: 40px;
+  width: 300px;
+}
+
+.navigation-dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.navigation-dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+.navigation-main__nav-item--has-dropdown:hover .navigation-dropdown {
+  display: block;
+}
+
+.navigation-main__nav-item--has-dropdown a {
+  color: #000;
+
+  padding: 16px;
+
+  font-size: 16px;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+/* ------------------------------------------ */
+
+/* Temel stil */
+.tile-new-section {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 20px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.imgbox-new {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imgbox-new img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease; /* Yumuşak ölçekleme efekti */
+}
+
+/* Kırmızı filtre efekti */
+.imgbox-new::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0; /* Başlangıçta görünmeyecek */
+  background: rgba(255, 0, 0, 0.2); /* Hafif kırmızı filtre */
+  transition: height 0.5s ease; /* Yumuşak geçiş efekti */
+  z-index: 1; /* Filtre önde olsun */
+}
+
+.tile-new-section:hover .imgbox-new::after {
+  height: 100%; /* Hover durumunda filtreyi tamamen indir */
+}
+
+.textbox-new {
+  position: absolute;
+  bottom: 10px; /* Başlık kutusu altta duracak */
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 2; /* Metin filtreden sonra gelsin */
+}
+
+.desc {
+  display: none; /* Alt açıklama başlangıçta görünmeyecek */
+  margin-top: 5px;
+  font-size: 14px;
+  opacity: 0; /* Hover öncesinde tamamen şeffaf */
+  transition: opacity 0.5s ease; /* Yumuşak geçiş efekti */
+}
+
+.tile-new-section:hover .imgbox-new img {
+  transform: scale(1.1);
+}
+
+.tile-new-section:hover .desc {
+  display: block;
+  opacity: 1; /* Hover durumunda açıklamayı görünür yap */
+}
