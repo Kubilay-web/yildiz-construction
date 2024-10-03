@@ -1,15 +1,33 @@
+@font-face {
+  font-family: "SemiBold"; /* Font ismi */
+  src: url("/public/Index-En/Index/fonts/open-sans.semibold.ttf")
+    format("truetype"); /* Font dosyasının yolu */
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+  font-family: "SemiBold" !important;
+}
+
+/* Temel stil */
 .navigation-main__nav-item--has-dropdown {
   position: relative;
 }
 
 .navigation-dropdown {
-  display: none;
+  visibility: hidden; /* Başlangıçta görünmez yap */
+  opacity: 0; /* Şeffaf */
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   z-index: 1;
   top: 40px;
   width: 300px;
+  max-height: 0; /* Başlangıçta yüksekliği sıfır */
+  overflow: hidden; /* Taşma gizlensin */
+  transition: max-height 0.8s ease, opacity 0.8s ease, visibility 0.8s; /* Geçiş efektleri */
 }
 
 .navigation-dropdown a {
@@ -23,8 +41,11 @@
   background-color: #f1f1f1;
 }
 
+/* Hover durumunda dropdown menüyü göster */
 .navigation-main__nav-item--has-dropdown:hover .navigation-dropdown {
-  display: block;
+  visibility: visible; /* Görünürlüğü aktif et */
+  opacity: 1; /* Opak hale getir */
+  max-height: 500px; /* Yüksekliği arttır (gerektiğinde menü boyutuna göre güncellenebilir) */
 }
 
 .navigation-main__nav-item--has-dropdown a {
@@ -36,6 +57,7 @@
   font-family: "open-sans", sans-serif;
 }
 
+/* Mobil uyumlu stil */
 @media only screen and (max-width: 600px) {
   .navigation-main__nav-item--has-dropdown a {
     color: inherit;
