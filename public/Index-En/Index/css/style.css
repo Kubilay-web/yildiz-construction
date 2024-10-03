@@ -27,7 +27,7 @@ a {
   width: 300px;
   max-height: 0; /* Başlangıçta yüksekliği sıfır */
   overflow: hidden; /* Taşma gizlensin */
-  transition: max-height 0.8s ease, opacity 0.8s ease, visibility 0.8s; /* Geçiş efektleri */
+  transition: max-height 1s ease, opacity 0.7s ease, visibility 0.8s; /* Geçiş efektleri */
 }
 
 .navigation-dropdown a {
