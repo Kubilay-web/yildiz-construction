@@ -69,29 +69,28 @@
 .imgbox-new img {
   width: 100%;
   height: 100%;
-  transition: transform 0.5s ease; /* Yumuşak ölçekleme efekti */
+  transition: transform 0.5s ease;
 }
 
-/* Kırmızı filtre efekti */
 .imgbox-new::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 0; /* Başlangıçta görünmeyecek */
-  background: rgba(255, 0, 0, 0.2); /* Hafif kırmızı filtre */
-  transition: height 0.5s ease; /* Yumuşak geçiş efekti */
-  z-index: 1; /* Filtre önde olsun */
+  height: 0;
+  background: rgba(255, 0, 0, 0.2);
+  transition: height 0.5s ease;
+  z-index: 1;
 }
 
 .tile-new-section:hover .imgbox-new::after {
-  height: 100%; /* Hover durumunda filtreyi tamamen indir */
+  height: 100%;
 }
 
 .textbox-new {
   position: absolute;
-  bottom: 10px; /* Başlık kutusu altta duracak */
+  bottom: 10px;
   width: 100%;
   color: white;
   text-align: center;
@@ -100,11 +99,11 @@
 }
 
 .desc {
-  display: none; /* Alt açıklama başlangıçta görünmeyecek */
+  display: none;
   margin-top: 5px;
   font-size: 14px;
-  opacity: 0; /* Hover öncesinde tamamen şeffaf */
-  transition: opacity 0.5s ease; /* Yumuşak geçiş efekti */
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .tile-new-section:hover .imgbox-new img {
@@ -113,5 +112,5 @@
 
 .tile-new-section:hover .desc {
   display: block;
-  opacity: 1; /* Hover durumunda açıklamayı görünür yap */
+  opacity: 1;
 }
