@@ -93,6 +93,54 @@ app.get("/static/css/glider.6f8873f.css", (req, res) => {
   );
 });
 
+app.get("/static/css/projects.aba1ea5.css", (req, res) => {
+  res.setHeader("Content-Type", "text/css");
+  res.sendFile(
+    path.join(__dirname, "public", "static", "css", "projects.aba1ea5.css")
+  );
+});
+
+app.get("/static/js/polyfills.pro~gli.e3f7486.js", (req, res) => {
+  res.setHeader("Content-Type", "application/javascript");
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "static",
+      "js",
+      "polyfills.pro~gli.e3f7486.js"
+    )
+  );
+});
+
+app.get("/static/js/parallax.7a2e277.js", (req, res) => {
+  res.setHeader("Content-Type", "application/javascript");
+  res.sendFile(
+    path.join(__dirname, "public", "static", "js", "parallax.7a2e277.js")
+  );
+});
+
+app.get("/static/js/vendors.pro~gli.fb47926.js", (req, res) => {
+  res.setHeader("Content-Type", "application/javascript");
+  res.sendFile(
+    path.join(__dirname, "public", "static", "js", "vendors.pro~gli.fb47926.js")
+  );
+});
+
+app.get("/static/js/projects.037d52b.js", (req, res) => {
+  res.setHeader("Content-Type", "application/javascript");
+  res.sendFile(
+    path.join(__dirname, "public", "static", "js", "projects.037d52b.js")
+  );
+});
+
+app.get("/static/js/glider.3a6232b.js", (req, res) => {
+  res.setHeader("Content-Type", "application/javascript");
+  res.sendFile(
+    path.join(__dirname, "public", "static", "js", "glider.3a6232b.js")
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
