@@ -28,61 +28,61 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "Index", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "Index", "index.html")
   );
 });
 
 app.get("/projects", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "Projects", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "Projects", "index.html")
   );
 });
 
 app.get("/who-we-are", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "Who-we-are", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "Who-we-are", "index.html")
   );
 });
 
 app.get("/capabilities", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "capabilities", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "capabilities", "index.html")
   );
 });
 
 app.get("/news", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "news", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "news", "index.html")
   );
 });
 
 app.get("/videos", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "videos", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "videos", "index.html")
   );
 });
 
 app.get("/contact", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "contact", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "contact", "index.html")
   );
 });
 
 app.get("/trade-partners", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "trade-partners", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "trade-partners", "index.html")
   );
 });
 
 app.get("/careers", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "careers", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "careers", "index.html")
   );
 });
 
 app.get("/plan-room", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index-En", "plan-room", "index.html")
+    path.join(__dirname, "public", "Index-Ger", "plan-room", "index.html")
   );
 });
 
